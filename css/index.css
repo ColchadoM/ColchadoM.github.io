@@ -20,8 +20,9 @@ svg{
 .card{
   opacity: 0;
   font-family: 'Fredoka One', cursive;
-  font-size: 2em;
+  font-size: 1.5em;
   margin-left: 8px;
+  color: rgb(45, 45, 45);
 }
 
 .card h1{
@@ -51,7 +52,7 @@ svg{
   width: 120px;
   left: 50%;
   transform: translate(-50%,0);
-  box-shadow: 0px 20px 24px #8080808a;
+  /* box-shadow: 0px 20px 24px #8080808a; */
 }
 
 .taperino h3{
@@ -195,13 +196,13 @@ footer{
   left: 50%;
   transform: translate(-50%,0);
   z-index: 3;
-  top: 78vh;
+  top: 60vh;
   width: 100%;
 }
 
 footer img{
   width: 100%;
-  padding: 0 7% 0 7%;
+  margin: 0 10%;
   cursor: pointer;
 }
 
@@ -250,10 +251,10 @@ footer h2{
 
 .section2 img:nth-child(1){
 
-  width: 30px;
+  width: 40px;
   position: fixed;
   z-index: 5;
-  left: 88vw;
+  left: 87vw;
   top: 20px;
 }
 
@@ -290,10 +291,11 @@ footer h2{
   width: 100%;
   position: relative;
   margin: 0;
-  font-size: 4.4em;
-  line-height: 1.3em;
+  font-size: 3.7em;
+  line-height: 1.2em;
   color: #5648ff;
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 .contacto{
@@ -311,8 +313,8 @@ footer h2{
   border-width: medium;
   border-color: rgb(209,209,209);
   visibility: hidden;
-  font-family: 'Libre Baskerville', serif;
-  box-shadow: 0px 20px 24px #8080808a;
+  font-family: 'Open Sans', sans-serif;
+  /* box-shadow: 0px 20px 24px #8080808a; */
 }
 
 .contacto h2{
@@ -340,7 +342,7 @@ footer h2{
 
 #bar img{
   width: 27px;
-  padding-left: 163px;
+  padding-left: 175px;
 }
 
 #botonesMail{
