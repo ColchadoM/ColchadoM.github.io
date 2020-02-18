@@ -9,16 +9,9 @@ $(document).ready(function(){
   let faxToggle = true;
 
   function removeEmoji(emoji){
-      let randSize = 0;
-      let randRotation = 0;
-      if ($(window).width() < 460) {
-        randSize = (Math.floor((Math.random()*40)+30));
-        randRotation = (Math.floor((Math.random()*(-600))+300));
-      }else{
-        randSize = (Math.floor((Math.random()*30)+5));
-        randRotation = (Math.floor((Math.random()*(-600))+300));
-      }
-      emoji.css({"--emoji-size":randSize+'vw',"--emoji-final-rotation":randRotation+'deg'});
+      const tamanoEmoji = ['BigRight','BigMid','BigLeft','MidRight','MidMid','MidLeft','SmallRight','SmallMid','SmallLeft']
+
+      emoji.addClass('emoji-'+tamanoEmoji[(Math.floor((Math.random()*tamanoEmoji.length)))]);
 
       setTimeout(function(){
           emoji.remove();
@@ -32,7 +25,7 @@ $(document).ready(function(){
         $(".taperino").addClass("desaparece");
       }
         iCnt++;
-        $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.png"'+' style="width:'+(Math.floor((Math.random()*40)+20))+'%;'+'left:'+ event.pageX+'px; top:'+event.pageY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');
+        $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.png"'+' style="'+'left:'+ event.pageX+'px; top:'+event.pageY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');
         const emojiActual = $("#iCnt"+iCnt);
         removeEmoji(emojiActual);
     }

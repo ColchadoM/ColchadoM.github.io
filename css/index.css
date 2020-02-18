@@ -75,20 +75,118 @@ svg{
 }
 
 .emoji{
-  width: 0;
   position: absolute;
   transform: translate(-50%, -50%);
-  --emoji-size:20vw;
-  --emoji-final-rotation:10deg;
-  animation-name: smaller;
+}
+
+.emoji-BigRight{
+  width: 70vw;
+  animation-name: bigRightAni;
   animation-duration: 12s;
   animation-iteration-count: 1;
 }
 
-@keyframes smaller {
-  from {width: var(--emoji-size);transform: rotate(0deg) translate(-50%, -50%);}
-  to {width: 0; transform: rotate(var(--emoji-final-rotation)) translate(-50%, -50%);}
+@keyframes bigRightAni {
+  from {width: 70vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(160deg) translate(-50%, -50%);}
 }
+
+.emoji-BigMid{
+  width: 70vw;
+  animation-name: bigMidAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes bigMidAni {
+  from {width: 70vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(10deg) translate(-50%, -50%);}
+}
+
+.emoji-BigLeft{
+  width: 70vw;
+  animation-name: bigLeftAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes bigLeftAni {
+  from {width: 70vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(-160deg) translate(-50%, -50%);}
+}
+
+.emoji-MidRight{
+  width: 50vw;
+  animation-name: midRightAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes midRightAni {
+  from {width: 50vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(160deg) translate(-50%, -50%);}
+}
+
+.emoji-MidMid{
+  width: 50vw;
+  animation-name: midMidAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes midMidAni {
+  from {width: 50vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(-10deg) translate(-50%, -50%);}
+}
+
+.emoji-MidLeft{
+  width: 50vw;
+  animation-name: midLeftAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes midLeftAni {
+  from {width: 50vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(-160deg) translate(-50%, -50%);}
+}
+
+.emoji-SmallRight{
+  width: 30vw;
+  animation-name: smallRightAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes smallRightAni {
+  from {width: 30vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(160deg) translate(-50%, -50%);}
+}
+
+.emoji-SmallMid{
+  width: 30vw;
+  animation-name: smallMidAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes smallMidAni {
+  from {width: 30vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(10deg) translate(-50%, -50%);}
+}
+
+.emoji-SmallLeft{
+  width: 30vw;
+  animation-name: smallLeftAni;
+  animation-duration: 12s;
+  animation-iteration-count: 1;
+}
+
+@keyframes smallLeftAni {
+  from {width: 30vw;transform: rotate(0deg) translate(-50%, -50%);}
+  to {width: 0; transform: rotate(-160deg) translate(-50%, -50%);}
+}
+
 
 footer{
   display: flex;
