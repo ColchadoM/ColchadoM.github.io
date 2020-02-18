@@ -51,6 +51,7 @@ svg{
   width: 120px;
   left: 50%;
   transform: translate(-50%,0);
+  box-shadow: 0px 20px 24px #8080808a;
 }
 
 .taperino h3{
