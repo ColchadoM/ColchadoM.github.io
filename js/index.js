@@ -29,7 +29,7 @@ $(document).ready(function(){
         $(".taperino").addClass("desaparece");
       }
         iCnt++;
-        $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.svg"'+' style="width:'+(Math.floor((Math.random()*40)+20))+'%;'+'left:'+ event.pageX+'px; top:'+event.pageY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');
+        $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.png"'+' style="width:'+(Math.floor((Math.random()*40)+20))+'%;'+'left:'+ event.pageX+'px; top:'+event.pageY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');
         const emojiActual = $("#iCnt"+iCnt);
         removeEmoji(emojiActual);
     }
