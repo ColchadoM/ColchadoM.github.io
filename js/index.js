@@ -70,4 +70,18 @@ $(document).ready(function(){
     },200);
   });
 
+
+  $("#copyMail").click(function() {
+    /* Get the text field */
+    var copyText = $(".contacto")[0].children[3];
+    console.log(copyText);
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(copyText).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    alert('e-mail copiado.')
+
+  })
 });
