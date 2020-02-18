@@ -2,9 +2,126 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>portafolio Colch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
   </head>
   <body>
-      <h1>hello world 2</h1>      
+
+    <div class="taperino">
+      <img src="assets/tap.gif"/>
+      <!-- <h3>Click anywhere for free emojis</h3> -->
+    </div>
+    <div class="positionR"></div>
+    <div class="card">
+      <h1>Interactive Experience Designer</h1>
+      <h1>UI/UX Front End Developer</h1>
+    </div>
+    <footer>
+      <img id="fax"src="assets/fax.png"/>
+      <img id="folder"src="assets/folder.png"/>
+    </footer>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="blurFilter">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feMorphology operator="erode" in="SourceGraphic" radius="2" result="erodi" />
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -7" result="goo" />
+          <feBlend in="erodi" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="section2">
+      <img id="backButton"src="assets/back.png"/>
+
+      <div class="sectionBlock">
+        <h2>mis humo<br>res.com</h2>
+        <ul>
+          <li>Interactive Designer de la obra de teatro presentada en Teatro UNAM creada por Fernanda del Monte.</li>
+          <li>Frontend development.</li>
+          <li>Página web utilizada como activación de la obra.</li>
+          <li>Visuales audioreactivos en Unity y TouchDesigner.</li>
+          <li><a href="http://mishumores.com">mishumores.com</a></li>
+        </ul>
+        <img src="assets/misHumores1.jpg"/>
+        <img src="assets/misHumores2.jpg"/>
+        <img src="assets/screenHumores.jpg"/>
+        <img src="assets/misHumores4.jpg"/>
+        <hr></hr>
+      </div>
+
+      <div class="sectionBlock">
+        <h2>Juego de Cartas</h2>
+        <ul>
+          <li>Physical Computing.</li>
+          <li>Sistema de detección de cartas NFC con Arduino.</li>
+          <li>Animación procedural en TouchDesigner.</li>
+          <li>Presentado en el Museo Universitario del Chopo.</li>
+        </ul>
+        <img src="assets/carta2.jpg"/>
+        <img src="assets/carta1.jpg"/>
+        <hr></hr>
+      </div>
+
+      <div class="sectionBlock">
+        <h2>Daily Daisy</h2>
+        <ul>
+          <li>Automatización de videos educativos infantiles.</li>
+          <li>Animación en After Effects.</li>
+          <li>Modelado 3D en Cinema 4D.</li>
+          <li>Watson TextToSpeech.</li>
+          <li>Diseño sonoro en Ableton Live.</li>
+          <li><a href="https://www.youtube.com/channel/UCd3NIrcOkhzQ2N9_FTnNxXw?view_as=subscriber">Daily Daisy</a></li>
+        </ul>
+        <img src="assets/daisy1.jpg"/>
+        <img src="assets/daisy2.jpg"/>
+        <img src="assets/daisy3.jpg"/>
+        <hr></hr>
+      </div>
+
+      <div class="sectionBlock">
+        <h2>Igem TecCEM</h2>
+        <ul>
+          <li>Página web para el equipo de biotecnología del TEC CEM.</li>
+          <li>Diseño de interfaz visual.</li>
+          <li>Frontend development.</li>
+          <li>Diseño sonoro en Ableton Live.</li>
+          <li><a href="http://2018.igem.org/Team:TecCEM">http://2018.igem.org/Team:TecCEM</a></li>
+        </ul>
+        <img src="assets/igem1.jpg"/>
+        <img src="assets/igem2.jpg"/>
+        <img src="assets/igem3.jpg"/>
+        <hr></hr>
+      </div>
+
+      <div class="sectionBlock">
+        <h2>Google Sky</h2>
+        <ul>
+          <li>Automatización de procesos digitales.</li>
+          <li>Bot que toma fotos del cielo de Google Maps.</li>
+          <li>Automatización web desarrollada utilizando Python.</li>
+        </ul>
+        <img src="assets/finished-sky-1.png"/>
+        <img src="assets/finished-sky-2.png"/>
+        <img src="assets/finished-sky-3.png"/>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="contacto">
+      <div id="bar">
+        <p>contact_me.exe</p>
+        <img id="close"src="assets/close.png"/>
+      </div>
+      <h2>Luis Colchado</h2>
+      <a href="tel:52-5554-182023"><h2>+52-55-5418-2023</h2></a>
+      <h2>lfcolchado@gmail.com</h2>
+    </div>
   </body>
 </html>
