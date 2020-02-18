@@ -1,6 +1,5 @@
 html{
   overflow-x: hidden;
-  opacity: 0;
 }
 
 body{
@@ -12,22 +11,24 @@ body{
   top: 0;
   overflow-x: hidden;
 }
+
 svg{
   position: absolute;
   top: 0;
 }
-.card{
 
+.card{
+  opacity: 0;
   font-family: 'Fredoka One', cursive;
   font-size: 2em;
   margin-left: 8px;
-
 }
 
 .card h1{
   margin-top: 25px;
   margin-bottom: 21px;
 }
+
 .positionR{
   filter:url('#blurFilter');
   height: 100vh;
