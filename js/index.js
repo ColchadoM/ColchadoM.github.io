@@ -38,7 +38,7 @@ $(document).ready(function(){
   $("#folder").click(function(){
     emojisToggle = false;
     // $(".contacto").css("visibility",'hidden');
-    $('.section2').css({'display':'block','visibility':'visible'});
+    $('.section2').css({'display':'inline-table','visibility':'visible'});
     $('.section2').removeClass('invisible');
     $('.section2').addClass('visible');
   });

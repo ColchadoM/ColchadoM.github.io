@@ -82,14 +82,14 @@ footer{
 }
 
 footer img{
-  height: max-content;
+
   width: 136px;
   padding: 0 4% 0 4%;
   cursor: pointer;
 }
 
 footer img:hover{
-  height: max-content;
+
   width: 139px;
   padding: 0 4% 0 4%;
 }
@@ -99,6 +99,7 @@ footer h2{
 }
 
 .section2{
+  left: 0;
   visibility: hidden;
   display: none;
   height: 0px;
@@ -137,7 +138,7 @@ footer h2{
 }
 
 .section2 img:nth-child(1){
-  height: max-content;
+
   width: 30px;
   position: fixed;
   z-index: 5;
@@ -217,6 +218,6 @@ footer h2{
 #bar img{
   width: 22px;
   padding-left: 169px;
-  height: max-content;
+
   padding-top: 3px;
 }
