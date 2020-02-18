@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  window.onload = function(){
+    $("html").css('opacity','1');
+  }
   const listaEmojis = ['lol', 'happy', 'sad','love','angel','teeth', 'tongue', 'kiss', 'pissed','embarrased', 'dead'];
   let iCnt = 0;
   let taperinoBool = true;
