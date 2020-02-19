@@ -18,6 +18,16 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="blurFilter">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feMorphology operator="erode" in="SourceGraphic" radius="2" result="erodi" />
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -7" result="goo" />
+          <feBlend in="erodi" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
 
     <div class="taperino">
       <img src="assets/tap.gif"/>
@@ -32,17 +42,7 @@
       <img id="fax"src="assets/fax.png"/>
       <img id="folder"src="assets/folder.png"/>
     </footer>
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="blurFilter">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-          <feMorphology operator="erode" in="SourceGraphic" radius="2" result="erodi" />
-          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -7" result="goo" />
-          <feBlend in="erodi" in2="goo" />
-        </filter>
-      </defs>
-    </svg>
-
+    
     <div class="section2">
       <img id="backButton"src="assets/back.png"/>
 
