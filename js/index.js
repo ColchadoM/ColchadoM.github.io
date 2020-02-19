@@ -1,7 +1,4 @@
 $(document).ready(function(){
-  window.onload = function(){
-    $(".card").css('opacity','1');
-  }
   const listaEmojis = ['lol', 'happy', 'sad','love','angel','teeth', 'tongue', 'kiss', 'pissed','embarrased', 'dead'];
   let iCnt = 0;
   let taperinoBool = true;
@@ -23,6 +20,8 @@ $(document).ready(function(){
       if(taperinoBool){
         taperinoBool = false;
         $(".taperino").addClass("desaparece");
+        $(".card").addClass("aparece");
+        $("footer").addClass("aparece");
       }
         iCnt++;
         $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.png"'+' style="'+'left:'+ event.pageX+'px; top:'+event.pageY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');

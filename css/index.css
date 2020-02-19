@@ -31,8 +31,7 @@ svg{
 }
 
 .positionR{
-  filter:url('#blurFilter');
-  height: 100vh;
+  -webkit-filter:url('#blurFilter');  
   position: absolute;
   top: 0;
   width: 100vw;
@@ -74,6 +73,18 @@ svg{
 @keyframes desapareceAni {
   from {opacity: 1;}
   to {opacity: 0;}
+}
+
+.aparece{
+  opacity: 1;
+  animation-name: apareceAni;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes apareceAni {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .emoji{
@@ -191,12 +202,13 @@ svg{
 
 
 footer{
+  opacity: 0;
   display: flex;
   position: absolute;
   left: 50%;
   transform: translate(-50%,0);
   z-index: 3;
-  top: 60vh;
+  bottom: 40px;
   width: 100%;
 }
 
