@@ -4,29 +4,48 @@ $(document).ready(function(){
   let taperinoBool = true;
   let emojisToggle = true;
   let faxToggle = true;
+  let inicianEmojis = false;
 
   function removeEmoji(emoji){
-      const tamanoEmoji = ['BigRight','BigMid','BigLeft','MidRight','MidMid','MidLeft','SmallRight','SmallMid','SmallLeft']
+      const tamanoEmoji = ['SmallRight','SmallMid','SmallLeft','MidRight','MidMid','MidLeft','BigRight','BigMid','BigLeft']
+      if($(window).width()>700){
+          let ranEmoj = Math.floor((Math.random()*(tamanoEmoji.length-6)));
+          emoji.addClass('emoji-'+tamanoEmoji[ranEmoj]);
+          console.log(tamanoEmoji[ranEmoj]);
+      }else if($(window).width()<700){
+          let ranEmoj = Math.floor((Math.random()*(tamanoEmoji.length)));
+          emoji.addClass('emoji-'+tamanoEmoji[ranEmoj]);
+          console.log(ranEmoj);
+      }
 
-      emoji.addClass('emoji-'+tamanoEmoji[(Math.floor((Math.random()*tamanoEmoji.length)))]);
 
       setTimeout(function(){
           emoji.remove();
       },11000);
   }
 
-  $("body").click(function(event){
-    if(emojisToggle){
-      if(taperinoBool){
-        taperinoBool = false;
-        $(".taperino").addClass("desaparece");
-        $(".card").addClass("aparece");
-        $("footer").addClass("aparece");
-      }
-        iCnt++;
-        $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.png"'+' style="'+'left:'+ event.pageX+'px; top:'+event.pageY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');
-        const emojiActual = $("#iCnt"+iCnt);
-        removeEmoji(emojiActual);
+
+  var interval = setInterval(function(){
+    if(emojisToggle && inicianEmojis){
+      iCnt++;
+      let randX = Math.floor(Math.random()*($(window).width()-100));
+      let randY = Math.floor(Math.random()*($(window).height()-300));
+
+      $(".positionR").append('<img class="emoji" src="assets/'+listaEmojis[(Math.floor((Math.random()*listaEmojis.length)))]+'.png"'+' style="'+'left:'+ randX+'px; top:'+randY+'px;"'+'id="iCnt'+iCnt+'"'+'/>');
+      const emojiActual = $("#iCnt"+iCnt);
+      removeEmoji(emojiActual);
+      // clearInterval(interval);
+    }
+  },2000);
+
+  $("body").click(function(){
+    if(taperinoBool){
+      taperinoBool = false;
+      $(".taperino").addClass("desaparece");
+      $(".card").addClass("aparece");
+      $("footer").addClass("aparece");
+      inicianEmojis = true;
+
     }
   });
 
@@ -47,7 +66,7 @@ $(document).ready(function(){
           if(faxToggle){
               emojisToggle = true;
           }
-      },2000);
+      },800);
     });
   });
 
