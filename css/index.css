@@ -1,5 +1,6 @@
 html{
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -75,8 +76,8 @@ svg{
   left: 50%;
   transform: translate(-50%,0);
   width: max-content;
-  color:rgb(149, 149, 149);
-  font-size: 0.8em;
+  color:white;
+  font-size: 1.5em;
 }
 
 .desaparece{
@@ -219,7 +220,7 @@ svg{
 
 footer{
   opacity: 0;
-  display: flex;
+  display: none;
   position: absolute;
   left: 50%;
   transform: translate(-50%,0);
@@ -292,6 +293,7 @@ footer h2{
   margin-block-start: 1.3em;
   padding-inline-start: 21px;
   color: #7d7d7d;
+  line-height: 1.8em;
 }
 
 .relevant{
@@ -385,7 +387,7 @@ footer h2{
 
 #bar img{
   width: 27px;
-  padding-left: 175px;
+  margin-left: 175px;
 }
 
 #botonesMail{
@@ -428,4 +430,32 @@ footer h2{
 #copyMail p{
   margin: 0;
   padding-top: 2px;
+}
+
+@media screen and (min-width: 800px) {
+    #folder:hover{
+      transform: rotate(3deg);
+    }
+    #fax:hover{
+      transform: rotate(3deg);
+    }
+    .section2{
+      visibility: visible;
+      display: table;
+      opacity: 1;
+    }
+    #backButton{
+      display: none;
+    }
+}
+
+.textoDiv{
+  padding: 0 5%;
+}
+
+#close{
+  cursor: pointer;
+}
+#googleSky{
+  margin-bottom: 50px;
 }

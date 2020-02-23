@@ -44,17 +44,29 @@ $(document).ready(function(){
       $(".taperino").addClass("desaparece");
       $(".card").addClass("aparece");
       $("footer").addClass("aparece");
+      setTimeout(function(){
+          $("footer").css("display","flex");
+      },100);
       inicianEmojis = true;
-
     }
   });
 
   $("#folder").click(function(){
-    emojisToggle = false;
+
+    if($(window).width()>700){
+      document.querySelector('.section2').scrollIntoView({
+        behavior: 'smooth'
+      });
+      console.log('hola');
+    }else if($(window).width()<700){
+      emojisToggle = false;
+      $('.section2').css({'display':'inline-table','visibility':'visible'});
+      $('.section2').removeClass('invisible');
+      $('.section2').addClass('visible');
+    }
+
     // $(".contacto").css("visibility",'hidden');
-    $('.section2').css({'display':'inline-table','visibility':'visible'});
-    $('.section2').removeClass('invisible');
-    $('.section2').addClass('visible');
+
   });
 
   $("#backButton").click(function(){
