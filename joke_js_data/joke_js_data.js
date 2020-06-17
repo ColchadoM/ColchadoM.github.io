@@ -110,3 +110,36 @@ var openFunction = function(){
     }
   },270);
 };
+
+window.onload = function(){
+  if (typeof window.orientation !== 'undefined'){
+    document.getElementById('warning').style.display = 'none';
+    document.getElementById('warning2').style.display = 'none';
+    document.getElementById('botonEntrar').style.display = 'none';
+    document.getElementById('warningMobile').style.display = 'block';
+    document.getElementById('botonInicioMobile').style.display = 'block';
+  }
+}
+
+var openFunctionMobile = function(){
+  document.getElementById('warningMobile').style.display = 'none';
+  var stringLargo = '';
+  var counter = 0;
+  var intervalo = setInterval(()=>{
+
+    counter++;
+    if (counter>=10) {
+      stringLargo = stringLargo.slice(50);
+      stringLargo = stringLargo.concat(palabras[counter%(palabras.length)]);
+    }else{
+      stringLargo = stringLargo.concat(palabras[counter%(palabras.length)]);
+    }
+    document.getElementById('geneticCode').innerHTML = stringLargo;
+    setTimeout(function(){
+      window.scrollTo(0,document.body.scrollHeight);
+    },200);
+    if (counter>=100) {
+      clearInterval(intervalo);
+    }
+  },270);
+};
