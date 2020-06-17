@@ -32,7 +32,7 @@ var inicioFunction = function(){
         `
         <img id="imagenTuto" style="width:200px; position:relative;left:50%;transform:translate(-50%,0)" src="assets/redArrow.png">
         <h2>Para continuar, da click en permitir ventanas emergentes.</h2>
-        <img id="imagenTuto2" style="width:280px; position:relative;left:50%;transform:translate(-50%,0)" src="assets/popups.jpg">
+        <img id="imagenTuto2" style="width:280px; position:relative;left:50%;transform:translate(-50%,0)" src="assets/popups.JPG">
         `
       );
     };
