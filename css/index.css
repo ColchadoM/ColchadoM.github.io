@@ -1,6 +1,7 @@
 html{
   overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 body{
@@ -12,6 +13,7 @@ body{
   top: 0;
   overflow-x: hidden;
   width: 100vw;
+  -webkit-overflow-scrolling: touch;
   /* background-image: linear-gradient(to bottom right, red, yellow); */
   /* background-image: url("../assets/fondo.JPG"); */
   /* background-size: cover; */
@@ -327,6 +329,12 @@ footer h2{
     word-wrap:break-word;
 }
 
+#titleHover:hover{
+  background-color: #5648ff;
+  color: white;
+  cursor: pointer;
+}
+
 #firstTitle h2{
     word-wrap:break-word;
 }
@@ -337,7 +345,7 @@ footer h2{
   left: 50%;
   transform: translate(-50%,0); */
   margin-top: 35px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .sectionBlock h2{
@@ -452,6 +460,7 @@ footer h2{
       visibility: visible;
       display: table;
       opacity: 1;
+      -webkit-overflow-scrolling: touch;
     }
     .section2 ul{
       width: 50%;
@@ -473,6 +482,7 @@ footer h2{
   padding: 0 5%;
   padding-bottom: 45px;
   background-color: #56565605;
+  word-wrap:break-word;
 }
 
 #close{

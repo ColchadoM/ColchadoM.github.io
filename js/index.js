@@ -6,6 +6,10 @@ $(document).ready(function(){
   let faxToggle = true;
   let inicianEmojis = false;
 
+  $('#titleHover').click(function(){
+    window.open('https://www.instagram.com/centro_cultural_kappa/', '_blank');
+  });
+
   function removeEmoji(emoji){
       const tamanoEmoji = ['SmallRight','SmallMid','SmallLeft','MidRight','MidMid','MidLeft','BigRight','BigMid','BigLeft']
       if($(window).width()>700){
@@ -57,7 +61,7 @@ $(document).ready(function(){
       document.querySelector('.section2').scrollIntoView({
         behavior: 'smooth'
       });
-      console.log('hola');
+      // console.log('hola');
     }else if($(window).width()<700){
       emojisToggle = false;
       $('.section2').css({'display':'inline-table','visibility':'visible'});
