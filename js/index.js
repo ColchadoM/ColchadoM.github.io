@@ -7,7 +7,20 @@ $(document).ready(function(){
   let inicianEmojis = false;
 
   $('#titleHover').click(function(){
-    window.open('https://www.instagram.com/centro_cultural_kappa/', '_blank');
+    // window.open('https://www.instagram.com/centro_cultural_kappa/', '_blank');
+    if($(window).width()>700){
+      document.querySelector('.section2').scrollIntoView({
+        behavior: 'smooth'
+      });
+      // console.log('hola');
+    }
+    // else if($(window).width()<700){
+    //   emojisToggle = false;
+    //   $('.section2').css({'display':'inline-table','visibility':'visible'});
+    //   $('.section2').removeClass('invisible');
+    //   $('.section2').addClass('visible');
+    // }
+
   });
 
   function removeEmoji(emoji){
@@ -15,11 +28,11 @@ $(document).ready(function(){
       if($(window).width()>700){
           let ranEmoj = Math.floor((Math.random()*(tamanoEmoji.length-6)));
           emoji.addClass('emoji-'+tamanoEmoji[ranEmoj]);
-          console.log(tamanoEmoji[ranEmoj]);
+          // console.log(tamanoEmoji[ranEmoj]);
       }else if($(window).width()<700){
           let ranEmoj = Math.floor((Math.random()*(tamanoEmoji.length)));
           emoji.addClass('emoji-'+tamanoEmoji[ranEmoj]);
-          console.log(ranEmoj);
+          // console.log(ranEmoj);
       }
 
 
@@ -42,7 +55,7 @@ $(document).ready(function(){
     }
   },2000);
 
-  $("body").click(function(){
+  setTimeout(function(){
     if(taperinoBool){
       taperinoBool = false;
       $(".taperino").addClass("desaparece");
@@ -53,7 +66,9 @@ $(document).ready(function(){
       },100);
       inicianEmojis = true;
     }
-  });
+  },200);
+
+var puerta = false;
 
   $("#folder").click(function(){
 
@@ -63,10 +78,28 @@ $(document).ready(function(){
       });
       // console.log('hola');
     }else if($(window).width()<700){
-      emojisToggle = false;
-      $('.section2').css({'display':'inline-table','visibility':'visible'});
-      $('.section2').removeClass('invisible');
-      $('.section2').addClass('visible');
+      if (!puerta) {
+        emojisToggle = false;
+        $('.section2').css({'display':'inline-table','visibility':'visible'});
+        $('.section2').removeClass('invisible');
+        $('.section2').addClass('visible');
+        $("#folder").attr('src','assets/folder_cerrar.png');
+        puerta = true;
+      }else{
+        $("html, body").animate({ scrollTop: 0 }, "slow", function(){
+          $('.section2').removeClass('visible');
+          $('.section2').addClass('invisible');
+          $("#folder").attr('src','assets/folder.png');
+          setTimeout(function(){
+            $('.section2').css({'display':'none','visibility':'hidden'});
+            if(faxToggle){
+              emojisToggle = true;
+            }
+          },800);
+          puerta = false;
+        });
+      };
+
     }
 
     // $(".contacto").css("visibility",'hidden');
@@ -104,7 +137,6 @@ $(document).ready(function(){
   $("#copyMail").click(function() {
     /* Get the text field */
     var copyText = $(".contacto")[0].children[3];
-    console.log(copyText);
     var $temp = $("<input>");
     $("body").append($temp);
     $temp.val($(copyText).text()).select();
