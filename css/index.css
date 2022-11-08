@@ -559,7 +559,9 @@ footer h2{
 }
 
 .textoDiv a:hover{
-  text-decoration: unset;
+	background-color: #3a3a3a;
+  color: white;
+  cursor: url('../assets/cursor_hover.png'),pointer;
 }
 
 #close{
