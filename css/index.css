@@ -550,6 +550,16 @@ footer h2{
   padding-bottom: 45px;
   /* background-color: #56565605; */
   word-wrap:break-word;
+	
+}
+
+.textoDiv a{
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.textoDiv a:hover{
+  text-decoration: unset;
 }
 
 #close{
